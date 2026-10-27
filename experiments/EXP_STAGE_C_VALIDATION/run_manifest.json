@@ -1,0 +1,141 @@
+{
+  "experiment_id": "EXP_20261025_210635",
+  "run_id": "RUN_20261025_210635_2669af",
+  "start_utc": "2026-10-25T21:06:35.985600+00:00",
+  "end_utc": "2026-10-25T21:06:36.040626+00:00",
+  "wall_duration_seconds": 0.055,
+  "environment": {
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+    "python_version": "3.12.15",
+    "python_compiler": "GCC 14.2.0",
+    "architecture": "x86_64",
+    "processor": ""
+  },
+  "software_versions": {
+    "liboqs": "0.16.0",
+    "liboqs_python": "0.16.0.1",
+    "cryptography": "50.0.2",
+    "openssl": "OpenSSL 3.5.7 9 Jun 2026"
+  },
+  "configuration": {
+    "trials_per_operation": 2,
+    "warmups_per_operation": 1,
+    "order_policy": "fixed",
+    "order_seed": 42,
+    "execution_order": [
+      "X25519",
+      "ML-KEM-768",
+      "ECDSA-P256",
+      "ML-DSA-65"
+    ],
+    "message_length_bytes": 140,
+    "algorithm_specifications": {
+      "ML-KEM-768": {
+        "standard": "NIST FIPS 203",
+        "type": "Key Encapsulation Mechanism (KEM)",
+        "claimed_security": "Category 3 (~128-bit post-quantum security)",
+        "parameter_set": "ml-kem-768 (Kyber-768 equivalent)"
+      },
+      "ML-DSA-65": {
+        "standard": "NIST FIPS 204",
+        "type": "Digital Signature Scheme",
+        "claimed_security": "Category 3 (~128-bit post-quantum security)",
+        "parameter_set": "ml-dsa-65 (Dilithium3 equivalent)"
+      },
+      "X25519": {
+        "standard": "RFC 7748",
+        "type": "Elliptic-Curve Diffie-Hellman Key Agreement",
+        "claimed_security": "128-bit classical security (broken by cryptanalytically relevant quantum computer)",
+        "parameter_set": "Curve25519"
+      },
+      "ECDSA-P256": {
+        "standard": "NIST FIPS 186-5 / ANSI X9.62",
+        "type": "Elliptic-Curve Digital Signature Scheme",
+        "claimed_security": "128-bit classical security (broken by cryptanalytically relevant quantum computer)",
+        "parameter_set": "secp256r1 curve, SHA-256 digest"
+      }
+    }
+  },
+  "resource_monitoring": {
+    "initial_snapshot": {
+      "ru_maxrss_bytes": 32108544,
+      "cgroup_memory_current_bytes": 51699712,
+      "cgroup_memory_max_bytes": 268435456,
+      "cgroup_memory_events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "cgroup_cpu_max": "50000 100000",
+      "cgroup_cpu_stat": {
+        "usage_usec": 446821,
+        "user_usec": 225320,
+        "system_usec": 221501,
+        "nr_periods": 9,
+        "nr_throttled": 7,
+        "throttled_usec": 152397,
+        "nr_bursts": 0,
+        "burst_usec": 0
+      },
+      "system_load_average": {
+        "load_1min": 0.0107,
+        "load_5min": 0.0566,
+        "load_15min": 0.0322
+      },
+      "direct_cpu_frequency_khz": "UNAVAILABLE (inaccessible inside unprivileged virtualization container)"
+    },
+    "final_snapshot": {
+      "ru_maxrss_bytes": 37613568,
+      "cgroup_memory_current_bytes": 58011648,
+      "cgroup_memory_max_bytes": 268435456,
+      "cgroup_memory_events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "cgroup_cpu_max": "50000 100000",
+      "cgroup_cpu_stat": {
+        "usage_usec": 478146,
+        "user_usec": 235217,
+        "system_usec": 242929,
+        "nr_periods": 9,
+        "nr_throttled": 7,
+        "throttled_usec": 152397,
+        "nr_bursts": 0,
+        "burst_usec": 0
+      },
+      "system_load_average": {
+        "load_1min": 0.0107,
+        "load_5min": 0.0566,
+        "load_15min": 0.0322
+      },
+      "direct_cpu_frequency_khz": "UNAVAILABLE (inaccessible inside unprivileged virtualization container)"
+    },
+    "peak_process_rss_bytes": 37613568,
+    "peak_process_rss_kib": 36732.0,
+    "container_memory_current_bytes": 58011648,
+    "container_memory_max_bytes": 268435456,
+    "container_cpu_max": "50000 100000",
+    "container_cpu_throttling": {
+      "nr_periods": 0,
+      "nr_throttled": 0,
+      "throttled_usec": 0
+    }
+  },
+  "correctness": {
+    "all_passed": true,
+    "total_checks": 22,
+    "failures": []
+  },
+  "output_files": {
+    "raw_csv": "benchmark_raw.csv",
+    "summary_csv": "benchmark_summary.csv",
+    "manifest_json": "run_manifest.json"
+  }
+}

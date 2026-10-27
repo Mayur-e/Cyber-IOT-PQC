@@ -1,0 +1,72 @@
+{
+  "initial_snapshot": {
+    "ru_maxrss_bytes": 32505856,
+    "cgroup_memory_current_bytes": 19140608,
+    "cgroup_memory_max_bytes": 268435456,
+    "cgroup_memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "cgroup_cpu_max": "100000 100000",
+    "cgroup_cpu_stat": {
+      "usage_usec": 329740,
+      "user_usec": 212247,
+      "system_usec": 117493,
+      "nr_periods": 5,
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "nr_bursts": 0,
+      "burst_usec": 0
+    },
+    "system_load_average": {
+      "load_1min": 0.3521,
+      "load_5min": 0.1348,
+      "load_15min": 0.0586
+    },
+    "direct_cpu_frequency_khz": "UNAVAILABLE (inaccessible inside unprivileged virtualization container)"
+  },
+  "final_snapshot": {
+    "ru_maxrss_bytes": 46399488,
+    "cgroup_memory_current_bytes": 28860416,
+    "cgroup_memory_max_bytes": 268435456,
+    "cgroup_memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "cgroup_cpu_max": "100000 100000",
+    "cgroup_cpu_stat": {
+      "usage_usec": 1725779,
+      "user_usec": 1560545,
+      "system_usec": 165234,
+      "nr_periods": 20,
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "nr_bursts": 0,
+      "burst_usec": 0
+    },
+    "system_load_average": {
+      "load_1min": 0.3521,
+      "load_5min": 0.1348,
+      "load_15min": 0.0586
+    },
+    "direct_cpu_frequency_khz": "UNAVAILABLE (inaccessible inside unprivileged virtualization container)"
+  },
+  "peak_process_rss_bytes": 46399488,
+  "peak_process_rss_kib": 45312.0,
+  "container_memory_current_bytes": 28860416,
+  "container_memory_max_bytes": 268435456,
+  "container_cpu_max": "100000 100000",
+  "container_cpu_throttling": {
+    "nr_periods": 15,
+    "nr_throttled": 0,
+    "throttled_usec": 0
+  }
+}

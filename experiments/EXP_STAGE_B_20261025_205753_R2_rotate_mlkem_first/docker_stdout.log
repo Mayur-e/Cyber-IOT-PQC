@@ -1,0 +1,36 @@
+liboqs-python faulthandler is disabled
+=== PQC Feasibility Benchmark Harness ===
+Experiment ID:   EXP_STAGE_B_20261025_205753_R2_rotate_mlkem_first
+Run ID:          RUN_20261025_205753_2
+liboqs version:  0.16.0 (python: 0.16.0.1)
+cryptography:    50.0.2
+OpenSSL:         OpenSSL 3.5.7 9 Jun 2026
+Trials/Op:       1000 | Warmups: 20
+Order policy:    rotate (seed=1)
+Execution order: ML-KEM-768 -> ECDSA-P256 -> ML-DSA-65 -> X25519
+Output directory:/app/experiments/EXP_STAGE_B_20261025_205753_R2_rotate_mlkem_first
+---------------------------------------------
+[1/4] Executing ML-KEM-768...
+[2/4] Executing ECDSA-P256...
+[3/4] Executing ML-DSA-65...
+[4/4] Executing X25519...
+
+[OK] Saved 11000 raw measurement rows to /app/experiments/EXP_STAGE_B_20261025_205753_R2_rotate_mlkem_first/benchmark_raw.csv
+
+Statistical Summary (microseconds):
+Algorithm    Operation                 Samples    Median      Mean       Std       IQR       MAD       P95
+----------------------------------------------------------------------------------------------------------
+ECDSA-P256   keygen                       1000    34.205    42.465    33.889    11.253     3.676    64.243
+ECDSA-P256   sign                         1000    62.890    74.243    34.394    17.392     3.951   115.443
+ECDSA-P256   verify                       1000   121.252   140.124    56.980    26.458     2.562   196.801
+ML-DSA-65    keygen                       1000    95.646   108.746    46.543    21.374     7.676   172.193
+ML-DSA-65    sign                         1000   191.029   239.407   144.689   154.373    63.011   530.969
+ML-DSA-65    verify                       1000    85.528    99.706    34.958    17.369     2.756   153.391
+ML-KEM-768   decapsulation                1000    32.575    39.115    18.049     9.634     0.938    58.597
+ML-KEM-768   encapsulation                1000    31.209    40.675    43.989    13.560     1.558    67.062
+ML-KEM-768   keygen                       1000    29.025    36.769    32.700    11.783     1.163    59.160
+X25519       keygen                       1000    52.959    65.787    62.689    12.812     1.240    97.295
+X25519       shared_secret_derivation     1000    51.279    59.959    29.537     8.671     0.932    81.357
+[OK] Saved statistical summary to /app/experiments/EXP_STAGE_B_20261025_205753_R2_rotate_mlkem_first/benchmark_summary.csv
+[OK] Saved run manifest to /app/experiments/EXP_STAGE_B_20261025_205753_R2_rotate_mlkem_first/run_manifest.json
+[OK] Saved resource monitoring to /app/experiments/EXP_STAGE_B_20261025_205753_R2_rotate_mlkem_first/resource_usage.json

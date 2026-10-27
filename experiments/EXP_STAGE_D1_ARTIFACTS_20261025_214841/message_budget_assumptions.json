@@ -1,0 +1,41 @@
+{
+  "experiment_id": "EXP_STAGE_D1_ARTIFACTS_20261025_214841",
+  "timestamp_utc": "2026-10-25T21:48:46.200596+00:00",
+  "measured_sizes_used": {
+    "x25519_pk_raw": 32,
+    "x25519_pk_spki": 44,
+    "x25519_ss": 32,
+    "mlkem_pk": 1184,
+    "mlkem_ct": 1088,
+    "mlkem_ss": 32,
+    "ecdsa_pk_uncompressed": 65,
+    "ecdsa_pk_compressed": 33,
+    "ecdsa_pk_spki": 91,
+    "ecdsa_sig_der_mean": 71.018,
+    "ecdsa_sig_p1363": 64,
+    "mldsa_pk": 1952,
+    "mldsa_sig": 3309
+  },
+  "models": {
+    "M1_ARTIFACT_ONLY": "Direct comparison of cryptographic serialized outputs without framing or protocol headers.",
+    "M2_KEY_EXCHANGE": {
+      "Scenario_K1": "Initiator already possesses recipient's verified public key. Initiator transmits ephemeral key/ciphertext.",
+      "Scenario_K2": "Full two-way ephemeral key exchange. Excludes certificate chain and TLS record headers."
+    },
+    "M3_SIGNED_MESSAGE": {
+      "Option_A": "Public key cached at receiver (only payload, signature, and optional framing transmitted).",
+      "Option_B": "Public key transmitted alongside signature (self-contained signed object, e.g. JWT or detached signature envelope).",
+      "Framing_Variants": [
+        "Raw (0B)",
+        "Length-prefix (4B)",
+        "Header (8B)"
+      ]
+    }
+  },
+  "critical_distinctions": [
+    "X25519 produces a 32-byte public key; ML-KEM-768 produces a 1184-byte public key and 1088-byte ciphertext.",
+    "X25519 shared secret is computed mutually via scalar multiplication, not transmitted as ciphertext.",
+    "ECDSA DER signature length is mathematically variable (69-73 bytes); ML-DSA-65 signature is strictly fixed (3309 bytes).",
+    "Models represent application-layer serialization and do not substitute for full TLS/TCP/IP packetization."
+  ]
+}

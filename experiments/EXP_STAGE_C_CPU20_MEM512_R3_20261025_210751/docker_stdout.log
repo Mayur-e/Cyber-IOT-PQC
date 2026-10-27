@@ -1,0 +1,36 @@
+liboqs-python faulthandler is disabled
+=== PQC Feasibility Benchmark Harness ===
+Experiment ID:   EXP_STAGE_C_CPU20_MEM512_R3_20261025_210751
+Run ID:          RUN_20261025_210751_C_9
+liboqs version:  0.16.0 (python: 0.16.0.1)
+cryptography:    50.0.2
+OpenSSL:         OpenSSL 3.5.7 9 Jun 2026
+Trials/Op:       1000 | Warmups: 20
+Order policy:    rotate (seed=2)
+Execution order: ECDSA-P256 -> ML-DSA-65 -> X25519 -> ML-KEM-768
+Output directory:/app/experiments/EXP_STAGE_C_CPU20_MEM512_R3_20261025_210751
+---------------------------------------------
+[1/4] Executing ECDSA-P256...
+[2/4] Executing ML-DSA-65...
+[3/4] Executing X25519...
+[4/4] Executing ML-KEM-768...
+
+[OK] Saved 11000 raw measurement rows to /app/experiments/EXP_STAGE_C_CPU20_MEM512_R3_20261025_210751/benchmark_raw.csv
+
+Statistical Summary (microseconds):
+Algorithm    Operation                 Samples    Median      Mean       Std       IQR       MAD       P95
+----------------------------------------------------------------------------------------------------------
+ECDSA-P256   keygen                       1000    33.063    42.363    47.570     9.944     2.948    60.563
+ECDSA-P256   sign                         1000    62.319    73.200    38.121    14.192     3.555   103.054
+ECDSA-P256   verify                       1000   121.186   137.521    47.747    20.551     2.760   181.303
+ML-DSA-65    keygen                       1000    96.385   110.712    59.492    18.893     7.863   165.238
+ML-DSA-65    sign                         1000   204.923   253.267   160.190   164.628    73.278   573.950
+ML-DSA-65    verify                       1000    85.638   103.969    63.565    15.587     2.518   156.153
+ML-KEM-768   decapsulation                1000    32.529    39.873    24.838     6.857     0.871    63.100
+ML-KEM-768   encapsulation                1000    31.212    39.977    31.903     7.520     1.256    70.895
+ML-KEM-768   keygen                       1000    29.437    36.608    26.247     9.199     1.169    61.804
+X25519       keygen                       1000    52.834    69.115   188.435    11.501     1.069    95.086
+X25519       shared_secret_derivation     1000    50.769    58.867    28.715     2.744     0.447    80.235
+[OK] Saved statistical summary to /app/experiments/EXP_STAGE_C_CPU20_MEM512_R3_20261025_210751/benchmark_summary.csv
+[OK] Saved run manifest to /app/experiments/EXP_STAGE_C_CPU20_MEM512_R3_20261025_210751/run_manifest.json
+[OK] Saved resource monitoring to /app/experiments/EXP_STAGE_C_CPU20_MEM512_R3_20261025_210751/resource_usage.json

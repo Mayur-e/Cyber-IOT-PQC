@@ -1,0 +1,6 @@
+stage_b_run,order_policy,order_seed,execution_order,peak_rss_kib,peak_rss_mib,container_memory_bytes,container_memory_mib,throttled_usec,nr_throttled,nr_periods,load_1min,correctness_all_passed
+20261025_205749_R1_fixed_x25519_first,fixed,0,X25519 -> ML-KEM-768 -> ECDSA-P256 -> ML-DSA-65,45312.0,44.25,53276672,50.81,7599,2,16,0.2598,True
+20261025_205753_R2_rotate_mlkem_first,rotate,1,ML-KEM-768 -> ECDSA-P256 -> ML-DSA-65 -> X25519,45312.0,44.25,32325632,30.83,0,0,16,0.2598,True
+20261025_205757_R3_rotate_ecdsa_first,rotate,2,ECDSA-P256 -> ML-DSA-65 -> X25519 -> ML-KEM-768,45184.0,44.12,28454912,27.14,0,0,16,0.3193,True
+20261025_205801_R4_rotate_mldsa_first,rotate,3,ML-DSA-65 -> X25519 -> ML-KEM-768 -> ECDSA-P256,45312.0,44.25,28348416,27.04,0,0,16,0.2935,True
+20261025_205805_R5_random_seed2024,random,2024,ECDSA-P256 -> ML-KEM-768 -> X25519 -> ML-DSA-65,45440.0,44.38,28356608,27.04,0,0,16,0.2695,True

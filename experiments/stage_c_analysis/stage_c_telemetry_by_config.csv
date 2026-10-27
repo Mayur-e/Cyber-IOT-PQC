@@ -1,0 +1,6 @@
+cpu_quota,mem_limit_mib,mean_wall_s,mean_rss_mib,std_rss_mib,mean_container_mem_mib,mean_throttled_ms,mean_nr_throttled,total_oom,total_oom_kill,all_passed
+0.5,512,2.9,44.373,0.25,26.983,1181.813,29.0,0,0,True
+1.0,256,1.545,44.167,0.144,27.43,0.0,0.0,0,0,True
+1.0,512,1.588,44.127,0.25,27.227,0.0,0.0,0,0,True
+1.0,1024,1.55,44.33,0.259,27.087,0.0,0.0,0,0,True
+2.0,512,1.596,44.293,0.075,27.213,0.0,0.0,0,0,True

@@ -1,0 +1,14 @@
+algorithm,category,artifact_type,encoding,representation,sample_count,is_fixed_size,min_bytes,max_bytes,mean_bytes,median_bytes,std_bytes,p90_bytes,p95_bytes,p99_bytes,all_valid
+ECDSA-P256,Digital Signature,public_key,DER_SPKI,SubjectPublicKeyInfo DER,50,True,91,91,91.0,91.0,0.0,91.0,91.0,91.0,True
+ECDSA-P256,Digital Signature,public_key,X962_Compressed,ANSI X9.62 compressed point 0x02/0x03||X,50,True,33,33,33.0,33.0,0.0,33.0,33.0,33.0,True
+ECDSA-P256,Digital Signature,public_key,X962_Uncompressed,ANSI X9.62 uncompressed point 0x04||X||Y,50,True,65,65,65.0,65.0,0.0,65.0,65.0,65.0,True
+ECDSA-P256,Digital Signature,signature,DER,"ASN.1 DER sequence of (r, s)",50,False,70,72,70.88,71.0,0.659,72.0,72.0,72.0,True
+ECDSA-P256,Digital Signature,signature,IEEE_P1363,Fixed-width raw r || s (32B + 32B),50,True,64,64,64.0,64.0,0.0,64.0,64.0,64.0,True
+ML-DSA-65,Digital Signature,public_key,Raw,FIPS 204 verification key (raw bytes),50,True,1952,1952,1952.0,1952.0,0.0,1952.0,1952.0,1952.0,True
+ML-DSA-65,Digital Signature,signature,Raw,FIPS 204 signature (raw bytes),50,True,3309,3309,3309.0,3309.0,0.0,3309.0,3309.0,3309.0,True
+ML-KEM-768,KEM,ciphertext,Raw,FIPS 203 encapsulation ciphertext (raw bytes),50,True,1088,1088,1088.0,1088.0,0.0,1088.0,1088.0,1088.0,True
+ML-KEM-768,KEM,public_key,Raw,FIPS 203 encapsulation key (raw bytes),50,True,1184,1184,1184.0,1184.0,0.0,1184.0,1184.0,1184.0,True
+ML-KEM-768,KEM,shared_secret,Raw,FIPS 203 shared secret (raw bytes),50,True,32,32,32.0,32.0,0.0,32.0,32.0,32.0,True
+X25519,Key Agreement,public_key,DER_SPKI,SubjectPublicKeyInfo DER,50,True,44,44,44.0,44.0,0.0,44.0,44.0,44.0,True
+X25519,Key Agreement,public_key,Raw,Curve25519 point (raw bytes),50,True,32,32,32.0,32.0,0.0,32.0,32.0,32.0,True
+X25519,Key Agreement,shared_secret,Raw,Shared Secret (raw bytes),50,True,32,32,32.0,32.0,0.0,32.0,32.0,32.0,True

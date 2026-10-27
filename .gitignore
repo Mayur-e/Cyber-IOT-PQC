@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C / Embedded build artifacts & compiled binaries
+*.o
+*.obj
+*.exe
+*.elf
+*.bin
+*.hex
+*.map
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+bin/
+obj/
+build/
+dist/
+
+# Upstream PQM4 cloned framework (external upstream repository with submodules)
+stage_e_embedded/pqm4/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE & Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating system files
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -1,0 +1,62 @@
+{
+  "experiment_id": "EXP_STAGE_D1_ARTIFACTS_20261025_214841",
+  "timestamp_utc": "2026-10-25T21:48:47.865194+00:00",
+  "notes": [
+    "1500 bytes is a standard Ethernet IP MTU; total Ethernet frame size is 1518 bytes (excluding VLAN/preamble).",
+    "128 bytes is the maximum Physical Layer Service Data Unit (PSDU) for IEEE 802.15.4-2006.",
+    "6LoWPAN adaptation layer provides header compression (RFC 6282) and fragmentation (RFC 4944).",
+    "Mode A evaluates mathematical division of raw artifact bytes against nominal link capacity.",
+    "Mode B models header consumption at MAC, adaptation, and transport layers, reporting real fragment counts.",
+    "Calculations are deterministic protocol models and do not represent physical radio sniff captures."
+  ],
+  "profiles": {
+    "Ethernet_Raw": {
+      "technology": "Ethernet IP",
+      "budget": 1500,
+      "overhead": 0,
+      "description": "1500B IP MTU unadjusted raw payload planning"
+    },
+    "Ethernet_IPv4_UDP": {
+      "technology": "Ethernet IP",
+      "budget": 1500,
+      "overhead": 28,
+      "description": "1500B MTU minus IPv4 (20B) + UDP (8B) headers"
+    },
+    "Ethernet_IPv6_UDP": {
+      "technology": "Ethernet IP",
+      "budget": 1500,
+      "overhead": 48,
+      "description": "1500B MTU minus IPv6 (40B) + UDP (8B) headers"
+    },
+    "Ethernet_IPv4_TCP": {
+      "technology": "Ethernet IP",
+      "budget": 1500,
+      "overhead": 40,
+      "description": "1500B MTU minus IPv4 (20B) + TCP (20B) headers"
+    },
+    "6LoWPAN_Raw": {
+      "technology": "6LoWPAN/802.15.4",
+      "budget": 128,
+      "overhead": 0,
+      "description": "128B IEEE 802.15.4 raw physical frame budget"
+    },
+    "6LoWPAN_MAC_Basic": {
+      "technology": "6LoWPAN/802.15.4",
+      "budget": 128,
+      "overhead": 25,
+      "description": "128B frame minus 802.15.4 MAC header + FCS (25B) -> 103B usable"
+    },
+    "6LoWPAN_Mesh_Sec": {
+      "technology": "6LoWPAN/802.15.4",
+      "budget": 128,
+      "overhead": 48,
+      "description": "128B frame minus MAC (25B), security MIC (14B), 6LoWPAN frag (9B) -> 80B usable"
+    },
+    "6LoWPAN_Conservative": {
+      "technology": "6LoWPAN/802.15.4",
+      "budget": 128,
+      "overhead": 64,
+      "description": "Conservative 64-byte payload per frame for constrained mesh"
+    }
+  }
+}
